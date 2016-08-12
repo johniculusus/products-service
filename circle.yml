@@ -7,7 +7,7 @@ deployment:
 test:
   override:    
     - mocha test > $CIRCLE_TEST_REPORTS/test-results.json
-    - curl -XPOST -H 'Content-Type:application/json' -H 'Accept: application/json' --data-binary @$CIRCLE_TEST_REPORTS/test-results.json http://23.20.38.137:9200/circleci/new_events -v -s
+    - curl -H "Content-Type: application/json" --data '{"build":true}' -X POST --data-binary @$CIRCLE_TEST_REPORTS/test-results.json http://23.20.38.137:9200/circleci/new_events -v -s
 
 #notify:
 #  webhooks:
