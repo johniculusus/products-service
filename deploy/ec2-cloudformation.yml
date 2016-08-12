@@ -48,7 +48,7 @@
         image: "adrielldagasuan/products-service"
         memory: 300
         portMappings:
-        - containerPort: 8080
+        - containerPort: 3000
           hostPort: 80
       family: products-service-family
       state: present
