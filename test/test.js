@@ -5,9 +5,9 @@ var request = require("supertest"),
     app = require("../server").getApp;
 
 describe('GET /api/products', function(){
-  it('expects HTTP response 200', function(done){
-    request(app)
-     .get('/api/products')
-	 .expect(200, done); 
+  it("returns status 200", function() {
+    request('/api/products', function(error, response, body) {
+      expect(response.statusCode).to.equal(200);
+    });
   });
 });
