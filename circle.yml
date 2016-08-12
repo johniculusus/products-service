@@ -9,3 +9,4 @@ test:
     # run test scripts for unit/integration/functional
     # - cd app && npm test
     - echo "test"
+    
