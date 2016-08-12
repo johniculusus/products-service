@@ -6,7 +6,7 @@ deployment:
 
 test:
   override:    
-    - mocha
+    - mocha test --reporter json:
   environment:
     MOCHA_FILE: $CIRCLE_TEST_REPORTS/junit/test-results.xml
 
