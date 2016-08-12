@@ -1,0 +1,21 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "restify-test",
+      "links": [
+        "mysql"
+      ],
+      "image": "adrielldagasuan/restify-test",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 80
+        }
+      ],
+      "memory": 500,
+      "cpu": 10
+    }
+  ],
+  "family": "staging-docker-node-cluster"
+}

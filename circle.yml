@@ -7,14 +7,14 @@ machine:
 dependencies:
   pre:
     # install Ansible for deployment
-    # - pip install ansible
+     - pip install ansible
     # install boto/boto3 needed by AWS Ansible modules
-    # - pip install boto
-    # - pip install boto3
-    # - cd /etc
-    # - sudo mkdir ansible
-    # - cd ansible
-    # - sudo mkdir hosts
+     - pip install boto
+     - pip install boto3
+     - cd /etc
+     - sudo mkdir ansible
+     - cd ansible
+     - sudo mkdir hosts
     # - cp ~/restify-test/deploy/hosts/ec2.ini /etc/ansible/
   override:
     # set NPM registry
@@ -39,7 +39,7 @@ deployment:
       - docker push adrielldagasuan/products-service
       # provision EC2 instance
       # - echo "Provisioning EC2 Instance"
-      # - ansible-playbook deploy/ec2-cloudformation.yml
+      - ansible-playbook deploy/ec2-cloudformation.yml
       # deploy tester-app
   production:
     branch: master
