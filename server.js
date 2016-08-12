@@ -24,8 +24,8 @@ app.use(function(req, res, next){
 app.use('/api', require('./routes/api'));
 
 // Start server
-var port = 8080, ip = "localhost";
+var port = 3000, ip = "localhost";
 
-app.listen(port, ip, function() {
+app.listen(port, function() {
   console.log('Express server listening on %d', port);
 });
