@@ -5,9 +5,10 @@ deployment:
       - $DOCKER_HUB_TRIGGER
 
 test:
-  override:    
-    - mocha test > $CIRCLE_TEST_REPORTS/test-results.json
-    - curl -X POST --data-binary @$CIRCLE_TEST_REPORTS/test-results.json http://23.20.38.137:9200/circleci/new_events -v -s
+  override:
+    - mocha test
+    #- mocha test > $CIRCLE_TEST_REPORTS/test-results.json
+    #- curl --data-binary @$CIRCLE_TEST_REPORTS/test-results.json http://23.20.38.137:9200/circleci/new_events -v -s
 
 #notify:
 #  webhooks:
