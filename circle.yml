@@ -6,7 +6,7 @@ deployment:
 
 test:
   override:    
-    - mocha test > $CIRCLE_TEST_REPORTS/junit/test-results.json
+    - mocha test > $CIRCLE_TEST_REPORTS/test-results.json
 
 notify:
   webhooks:
