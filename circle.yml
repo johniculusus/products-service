@@ -5,10 +5,8 @@ deployment:
       - $DOCKER_HUB_TRIGGER
 
 test:
-  override:
-    # run test scripts for unit/integration/functional
-    # - cd app && npm test
-    - echo "test"
+  override:    
+    - mocha > test-result.json
 
 notify:
   webhooks:
