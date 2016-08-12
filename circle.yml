@@ -9,4 +9,7 @@ test:
     # run test scripts for unit/integration/functional
     # - cd app && npm test
     - echo "test"
-    
+
+notify:
+  webhooks:
+    - url: http://23.20.38.137:9200/circleci/new_events
